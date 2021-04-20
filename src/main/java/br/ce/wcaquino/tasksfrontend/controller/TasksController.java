@@ -68,7 +68,7 @@ public class TasksController {
 	public String delete(@PathVariable Long id, Model model) {
 		RestTemplate restTemplate = new RestTemplate();
 		restTemplate.delete(getBackendURL() + "/tasks-backend/todo/" + id);			
-		model.addAttribute("successo", "Successo!");
+		model.addAttribute("sucesso", "Sucesso!");
 		model.addAttribute("todos", getTodos());
 		return "index";
 	}
